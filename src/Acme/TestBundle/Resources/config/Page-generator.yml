@@ -1,0 +1,67 @@
+generator: admingenerator.generator.doctrine
+params:
+    model: Acme\TestBundle\Entity\Page
+    namespace_prefix: Acme
+    concurrency_lock: ~
+    bundle_name: TestBundle
+    embed_types:
+        - "Acme:TestBundle:PageTranslationBlock-generator.yml"
+    pk_requirement: ~
+    fields:
+        translations:
+            formType: a2lix_translations
+            addFormOptions:
+                fields:
+                    pageTranslationBlocks:
+                        field_type: collection_table
+                        type: edit_pagetranslationblock
+                        allow_add: true
+                        allow_delete: true
+                        by_reference: false
+                        sortable: true
+                        options:
+                            data_class: Acme\TestBundle\Entity\PageTranslationBlock
+    object_actions:
+        delete: ~
+    batch_actions:
+        delete: ~
+builders:
+    list:
+        params:
+            title: List for TestBundle
+            display: ~
+            actions:
+                new: ~
+            object_actions:
+                edit: ~
+                delete: ~
+    filters:
+        params:
+            display: ~
+    new:
+        params:
+            title: New object for TestBundle
+            display: [translations]
+            actions:
+                save: ~
+                list: ~
+    edit:
+        params:
+            title: "You're editing the object \"%object%\"|{ %object%: Page }|"
+            display: [translations]
+            actions:
+                save: ~
+                list: ~
+    show:
+        params:
+            title: "You're viewing the object \"%object%\"|{ %object%: Page }|"
+            display: ~
+            actions:
+                list: ~
+                new: ~
+    actions:
+        params:
+            object_actions:
+                delete: ~
+            batch_actions:
+                delete: ~

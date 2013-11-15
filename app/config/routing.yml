@@ -1,0 +1,14 @@
+AcmeTestBundle_admin_acme_test_bundle_PageTranslationBlock:
+    resource: "@AcmeTestBundle/Controller/PageTranslationBlock/"
+    type:     admingenerator
+    prefix:   /admin/acme_test_bundle/PageTranslationBlock
+
+AcmeTestBundle_admin_acme_test_bundle_Page:
+    resource: "@AcmeTestBundle/Controller/Page/"
+    type:     admingenerator
+    prefix:   /admin/acme_test_bundle/Page
+
+AcmeTestBundle_admin_acme_test_bundle_Block:
+    resource: "@AcmeTestBundle/Controller/Block/"
+    type:     admingenerator
+    prefix:   /admin/acme_test_bundle/Block

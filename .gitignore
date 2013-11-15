@@ -1,0 +1,11 @@
+/web/bundles/
+/web/css
+/web/js
+/web/components
+/web/assetic/
+/app/bootstrap*
+/app/cache/*
+/app/logs/*
+*~
+/vendor/
+composer.lock

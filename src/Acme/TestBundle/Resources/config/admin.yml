@@ -1,0 +1,23 @@
+# Symfony2AdminGenerator Configuration
+admingenerator_generator:
+    use_doctrine_orm: ~
+    base_admin_template: AcmeTestBundle::base_admin.html.twig
+
+# A2lix Configuration
+a2lix_translation_form:
+    locales: [fr, en]
+    default_required: false
+    manager_registry: doctrine
+    templating: "A2lixTranslationFormBundle::default.html.twig"
+
+services:
+    acme_test.form.type.pageTranslationBlock:
+        class: Acme\TestBundle\Form\Type\PageTranslationBlock\EditType
+        arguments: ~
+        tags:
+            - { name: form.type, alias: edit_pagetranslationblock }
+    acme_test.form.type.pageBlock:
+        class: Acme\TestBundle\Form\Type\Block\EditType2
+        arguments: ~
+        tags:
+            - { name: form.type, alias: edit_block2 }

@@ -1,0 +1,20 @@
+{% extends "AdmingeneratorGeneratorBundle::base_admin.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    {% include 'AvocodeFormExtensionsBundle::stylesheets.html.twig' %}
+    {% if form is defined %}
+        {{ form_stylesheet(form) }}
+    {% endif %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {% include 'AvocodeFormExtensionsBundle::javascripts.html.twig' %}
+    {% if form is defined %}
+        {{ form_javascript(form) }}
+    {% endif %}
+{% endblock %}
+
