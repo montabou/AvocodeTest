@@ -10,11 +10,12 @@ params:
     fields:
         children:
             dbType: collection
-            formType: collection_table
+            formType: afe_collection_table
             addFormOptions:
                 type: edit_block2
                 allow_add: true
                 allow_delete: true
+                prototype_name: __block__
                 by_reference: false
                 options:
                     data_class: Acme\TestBundle\Entity\Block

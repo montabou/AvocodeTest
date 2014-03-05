@@ -6,7 +6,7 @@ admingenerator_generator:
 # A2lix Configuration
 a2lix_translation_form:
     locales: [fr, en]
-    default_required: false
+    required_locales: []
     manager_registry: doctrine
     templating: "A2lixTranslationFormBundle::default.html.twig"
 

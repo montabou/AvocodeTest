@@ -13,11 +13,12 @@ params:
             addFormOptions:
                 fields:
                     pageTranslationBlocks:
-                        field_type: collection_table
+                        field_type: afe_collection_table
                         type: edit_pagetranslationblock
                         allow_add: true
                         allow_delete: true
                         by_reference: false
+                        prototype_name: __page__
                         sortable: true
                         options:
                             data_class: Acme\TestBundle\Entity\PageTranslationBlock
